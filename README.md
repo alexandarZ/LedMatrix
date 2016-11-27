@@ -23,8 +23,3 @@ Components:
   * 4 Matrix LED displays with MAX7219 driver
   (https://www.aliexpress.com/item/MAX7219-Dot-Matrix-Module-For-Arduino-Microcontroller-4-In-One-Display-with-5P-Line/32622207747.html)
   
-
-Font:
-----------------
-
-Font follows ASCII table from character Space to character ~, 94 characters. 
