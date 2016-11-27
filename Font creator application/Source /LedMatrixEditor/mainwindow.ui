@@ -1,0 +1,1852 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>519</width>
+    <height>379</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>8X8 Font creator</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>130</y>
+      <width>151</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Device:</string>
+    </property>
+    <widget class="QPushButton" name="btn_serial_start">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Start / Stop</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>131</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Baud:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="serial_port_baud">
+        <property name="maximumSize">
+         <size>
+          <width>90</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>131</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Port:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="serial_port_name">
+        <property name="maximumSize">
+         <size>
+          <width>90</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="btn_send">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>30</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Send to device</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_clear">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>70</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Clear</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>280</y>
+      <width>341</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>HEX:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="hex_value">
+       <property name="text">
+        <string>{0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0}</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>241</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
+     <property name="leftMargin">
+      <number>5</number>
+     </property>
+     <property name="topMargin">
+      <number>5</number>
+     </property>
+     <property name="rightMargin">
+      <number>5</number>
+     </property>
+     <property name="bottomMargin">
+      <number>5</number>
+     </property>
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="btn_00">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="btn_01">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="btn_02">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QPushButton" name="btn_03">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="4">
+      <widget class="QPushButton" name="btn_04">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="5">
+      <widget class="QPushButton" name="btn_05">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="6">
+      <widget class="QPushButton" name="btn_06">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="7">
+      <widget class="QPushButton" name="btn_07">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="btn_10">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPushButton" name="btn_11">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="btn_12">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QPushButton" name="btn_13">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="4">
+      <widget class="QPushButton" name="btn_14">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="5">
+      <widget class="QPushButton" name="btn_15">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="6">
+      <widget class="QPushButton" name="btn_16">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="7">
+      <widget class="QPushButton" name="btn_17">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QPushButton" name="btn_20">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPushButton" name="btn_21">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QPushButton" name="btn_22">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="QPushButton" name="btn_23">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="4">
+      <widget class="QPushButton" name="btn_24">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="5">
+      <widget class="QPushButton" name="btn_25">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="6">
+      <widget class="QPushButton" name="btn_26">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="7">
+      <widget class="QPushButton" name="btn_27">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QPushButton" name="btn_30">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QPushButton" name="btn_31">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
+      <widget class="QPushButton" name="btn_32">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3">
+      <widget class="QPushButton" name="btn_33">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="4">
+      <widget class="QPushButton" name="btn_34">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="5">
+      <widget class="QPushButton" name="btn_35">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="6">
+      <widget class="QPushButton" name="btn_36">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="7">
+      <widget class="QPushButton" name="btn_37">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QPushButton" name="btn_40">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QPushButton" name="btn_41">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2">
+      <widget class="QPushButton" name="btn_42">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="3">
+      <widget class="QPushButton" name="btn_43">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="4">
+      <widget class="QPushButton" name="btn_44">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="5">
+      <widget class="QPushButton" name="btn_45">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="6">
+      <widget class="QPushButton" name="btn_46">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="7">
+      <widget class="QPushButton" name="btn_47">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QPushButton" name="btn_50">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QPushButton" name="btn_51">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="2">
+      <widget class="QPushButton" name="btn_52">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="3">
+      <widget class="QPushButton" name="btn_53">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="4">
+      <widget class="QPushButton" name="btn_54">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="5">
+      <widget class="QPushButton" name="btn_55">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="6">
+      <widget class="QPushButton" name="btn_56">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="7">
+      <widget class="QPushButton" name="btn_57">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QPushButton" name="btn_60">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QPushButton" name="btn_61">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="2">
+      <widget class="QPushButton" name="btn_62">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="3">
+      <widget class="QPushButton" name="btn_63">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="4">
+      <widget class="QPushButton" name="btn_64">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="5">
+      <widget class="QPushButton" name="btn_65">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="6">
+      <widget class="QPushButton" name="btn_66">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="7">
+      <widget class="QPushButton" name="btn_67">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QPushButton" name="btn_70">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QPushButton" name="btn_71">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="2">
+      <widget class="QPushButton" name="btn_72">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="3">
+      <widget class="QPushButton" name="btn_73">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="4">
+      <widget class="QPushButton" name="btn_74">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="5">
+      <widget class="QPushButton" name="btn_75">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="6">
+      <widget class="QPushButton" name="btn_76">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="7">
+      <widget class="QPushButton" name="btn_77">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeoff>:/icons/led_off.png</activeoff>
+         <activeon>:/icons/led_on.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>29</width>
+         <height>29</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>280</y>
+      <width>151</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(85, 170, 0);</string>
+    </property>
+    <property name="text">
+     <string>By: Alex Zed</string>
+    </property>
+   </widget>
+   <zorder>frame</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>btn_clear</zorder>
+   <zorder>groupBox</zorder>
+   <zorder>btn_send</zorder>
+   <zorder>label_4</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>519</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew_sprite"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionNew_sprite">
+   <property name="text">
+    <string>New sprite</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
