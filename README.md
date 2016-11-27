@@ -11,7 +11,7 @@ Features:
    * Shift display up
    * Shift display down
  
-2) Font creator application
+2) [Font creator application] (https://github.com/alexandarZ/LedMatrix/tree/master/Font%20creator%20application)
 
 Components:
 ----------------
